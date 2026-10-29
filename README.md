@@ -1,32 +1,18 @@
-# React + TypeScript + Vite
+# Pavlo Rakulenko — personal landing (JDG)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Static site: `index.html` + `styles.css` + `script.js`. No build step.
 
-Currently, two official plugins are available:
+## Run in StackBlitz
+1. Create a new **Static / Vanilla JS** project (or import this folder / GitHub repo).
+2. Upload all files from this archive into the project root.
+3. It starts via `npm start` (servor), same as the Sanvin project. (Local fonts live in `fonts/`.)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- Languages: **PL (default) / UA / EN**, remembered in localStorage.
+- Contact form opens the visitor's e-mail app (mailto) — no backend needed.
+  To collect submissions server-side later, swap the submit handler in `script.js`
+  for a service like Formspree/Getform or your own API.
+- Privacy (GDPR) dialog, business info (NIP/REGON, CEIDG link), responsive, reduced-motion friendly.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Editing content
+All texts for the three languages live in one place: the `I18N` object at the top of `script.js`.

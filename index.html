@@ -1,13 +1,503 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pavlo Rakulenko — Strony. Aplikacje. Cyfrowe procesy.</title>
+  <meta name="description" content="Od pierwszego pomysłu do działającego rozwiązania. Tworzę strony, aplikacje i portale, które ułatwiają pracę." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23181918'/%3E%3Ctext x='30' y='42' font-family='Arial' font-size='26' font-weight='bold' fill='%23f7f7f5' text-anchor='middle'%3Epr%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+<div class="site-shell">
+
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Pavlo Rakulenko">
+      <span class="brand-icon">pr<span>↗</span></span>
+      <span>Pavlo Rakulenko<small data-i18n="role">NIEZALEŻNY DEVELOPER</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#solutions" data-i18n="nav1">Rozwiązania</a>
+      <a href="#content" data-i18n="nav2">Treści</a>
+      <a href="#about" data-i18n="nav3">O mnie</a>
+      <a href="#process" data-i18n="nav4">Jak pracuję</a>
+    </nav>
+    <div class="header-right">
+      <div class="language-switch" aria-label="Language">
+        <button type="button" data-lang="pl" aria-pressed="true" class="active">PL</button>
+        <button type="button" data-lang="ua" lang="uk" aria-pressed="false">UA</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#contact" class="header-contact"><span data-i18n="contact">Porozmawiajmy</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+      </a>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
+        <svg class="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg>
+        <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" hidden>
+      <a href="#solutions" data-i18n="nav1">Rozwiązania
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="#content" data-i18n="nav2">Treści
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="#about" data-i18n="nav3">O mnie
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="#process" data-i18n="nav4">Jak pracuję
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+      <a href="#contact" data-i18n="contact">Porozmawiajmy
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-top">
+        <span class="intro"><span class="intro-line"></span><span data-i18n="intro">Cześć, jestem Pavlo.</span></span>
+        <span class="availability"><i></i><span data-i18n="available">Otwarty na nowe projekty</span></span>
+      </div>
+      <div class="hero-heading">
+        <h1 id="hero-title">
+          <span data-i18n="hero1">Strony. Aplikacje.</span>
+          <span data-i18n="hero2">Cyfrowe procesy.</span>
+          <span class="end-to-end"><span data-i18n="end">Od A do Z.</span><span class="hero-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+          </span></span>
+        </h1>
+        <div class="glass-sculpture" aria-hidden="true">
+          <div class="sculpture-shadow"></div>
+          <div class="glass-ring ring-back"></div>
+          <div class="glass-ring ring-front"></div>
+          <span class="sculpture-plus">+</span>
+          <span class="sculpture-note">IDEA → REALITY</span>
+        </div>
+      </div>
+      <div class="hero-bottom">
+        <span class="micro hero-location"><span data-i18n="location">POLSKA · WSPÓŁPRACA ZDALNA</span><br /><span>WEB / APPS / AUTOMATION</span></span>
+        <div class="hero-description">
+          <p data-i18n="summary">Od pierwszego pomysłu do działającego rozwiązania. Tworzę strony, aplikacje i portale, które ułatwiają pracę. Pomagam też nadać Twoim treściom głos i obraz.</p>
+          <div class="hero-actions">
+            <a class="button button-blue" href="#contact"><span data-i18n="cta">Opowiedz mi o projekcie</span>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+            <a class="text-link" href="#solutions"><span data-i18n="explore">Poznaj rozwiązania</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-rule">
+        <span class="micro" data-i18n="scroll">PRZEWIŃ, ABY POZNAĆ MNIE</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </div>
+    </section>
+
+    <section id="solutions" class="section solutions">
+      <div class="section-layout reveal">
+        <div class="section-label micro" data-i18n="sol_label">01 / ROZWIĄZANIA</div>
+        <div>
+          <div class="section-heading">
+            <h2 data-i18n="sol_title">Dobry pomysł.
+Dobrze zbudowany.</h2>
+            <p data-i18n="sol_desc">Dla osób z pomysłem i firm z wyzwaniem. Technologia, która odpowiada na realne potrzeby.</p>
+          </div>
+          <div class="services-grid">
+
+            <article class="service-card service-0">
+              <div class="service-topline"><span class="micro">01</span><span class="micro" data-i18n="concept">PRZYKŁADOWE ROZWIĄZANIE</span></div>
+              <div class="visual visual-web" aria-hidden="true">
+                <div class="mini-browser">
+                  <div class="browser-bar"><span class="mini-mark">a.</span><span>studio / digital</span><span>↗</span></div>
+                  <div class="mini-web-copy"><div data-i18n="mock0a">Twój pomysł.</div><div data-i18n="mock0b">Nowy wymiar.</div></div>
+                  <div class="mini-orbit"><i></i><i></i></div>
+                  <span class="mini-cta"><span data-i18n="mock1">Zacznij tutaj</span>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span>
+                  <div class="web-line"></div>
+                </div>
+                <div class="visual-caption">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+                  WEB / DESIGN / DEVELOPMENT
+                </div>
+              </div>
+              <button type="button" class="service-title" data-select="0"><span data-i18n="s1_title">Strony internetowe</span><span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></button>
+              <p data-i18n="s1_desc">Twoje miejsce w sieci. Szybkie, przemyślane strony i landing pages, które prezentują Twoją ofertę i pomagają zdobywać zapytania.</p>
+              <div class="tags"><span data-i18n="s1_t1">Wizytówki</span><span data-i18n="s1_t2">Landing pages</span><span data-i18n="s1_t3">Responsywność</span></div>
+            </article>
+
+            <article class="service-card service-1">
+              <div class="service-topline"><span class="micro">02</span><span class="micro" data-i18n="concept">PRZYKŁADOWE ROZWIĄZANIE</span></div>
+              <div class="visual visual-app" aria-hidden="true">
+                <div class="app-window">
+                  <div class="app-sidebar">
+                    <span class="app-symbol">
+                      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                    </span>
+                    <i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="app-content">
+                    <div class="app-title"><span data-i18n="mock2">Przestrzeń projektu</span><span class="avatar-dot">P</span></div>
+                    <div class="app-tabs"><span data-i18n="mock3">Przegląd</span><span data-i18n="mock4">Dokumenty</span><span data-i18n="mock5">Zadania</span></div>
+                    <div class="app-panels">
+                      <div>
+                        <small data-i18n="mock5">Zadania</small>
+                        <strong>12<span>/ 16</span></strong>
+                        <div class="chart-bars"><i style="height:30%"></i><i style="height:50%"></i><i style="height:40%"></i><i style="height:75%"></i><i style="height:60%"></i><i style="height:95%"></i><i style="height:80%"></i></div>
+                      </div>
+                      <div class="app-checks">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                        <span data-i18n="mock4">Dokumenty</span>
+                        <div></div><div></div><div></div>
+                      </div>
+                    </div>
+                    <div class="app-row"><span></span><i></i><i></i>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                    <div class="app-row"><span></span><i></i><i></i>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+                  </div>
+                </div>
+                <div class="visual-caption">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                  PRODUCT / UX / INTEGRATIONS
+                </div>
+              </div>
+              <button type="button" class="service-title" data-select="1"><span data-i18n="s2_title">Aplikacje webowe</span><span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></button>
+              <p data-i18n="s2_desc">Od pomysłu do produktu. Dedykowane aplikacje, portale klienta i narzędzia, które robią dokładnie to, czego potrzebujesz.</p>
+              <div class="tags"><span data-i18n="s2_t1">MVP</span><span data-i18n="s2_t2">Portale</span><span data-i18n="s2_t3">Integracje</span></div>
+            </article>
+
+            <article class="service-card service-2">
+              <div class="service-topline"><span class="micro">03</span><span class="micro" data-i18n="concept">PRZYKŁADOWE ROZWIĄZANIE</span></div>
+              <div class="visual visual-process" aria-hidden="true">
+                <div class="process-orbit orbit-one"></div>
+                <div class="process-orbit orbit-two"></div>
+                <div class="flow-heading" data-i18n="mock6">Wszystko na swoim miejscu.</div>
+                <div class="flow-nodes">
+                  <div class="flow-node">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                    <span data-i18n="mock7">Wniosek</span>
+                  </div>
+                  <span class="connector"></span>
+                  <div class="flow-node">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+                    <span data-i18n="mock8">Akceptacja</span>
+                  </div>
+                  <span class="connector"></span>
+                  <div class="flow-node final-node">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    <span data-i18n="mock9">Gotowe</span>
+                  </div>
+                </div>
+                <div class="floating-check">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span data-i18n="mock9">Gotowe</span>
+                </div>
+                <div class="visual-caption">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+                  PROCESS / SYSTEMS / AUTOMATION
+                </div>
+              </div>
+              <button type="button" class="service-title" data-select="2"><span data-i18n="s3_title">Procesy i automatyzacja</span><span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></button>
+              <p data-i18n="s3_desc">Mniej chaosu, więcej kontroli. Obieg dokumentów, portale compliance i automatyzacje, które porządkują codzienną pracę.</p>
+              <div class="tags"><span data-i18n="s3_t1">Dokumenty</span><span data-i18n="s3_t2">Compliance</span><span data-i18n="s3_t3">Automatyzacja</span></div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="content" class="section content-section">
+      <div class="section-layout reveal">
+        <div class="section-label micro" data-i18n="cs_label">02 / TREŚCI</div>
+        <div>
+          <div class="section-heading">
+            <h2 data-i18n="cs_title">Twój przekaz.
+Głos i obraz.</h2>
+            <p data-i18n="cs_desc">Dla twórców, marek i osób z pomysłem. Głos, krótkie wideo i wersje językowe do publikacji na YouTube, TikToku i Instagramie.</p>
+          </div>
+          <div class="content-offering">
+            <div class="voice-poster">
+              <span class="micro" data-i18n="cs_eyebrow">OD TEKSTU DO MATERIAŁU</span>
+              <div class="voice-poster-title"><span data-i18n="cs_vtitle">Daj swojej
+idei głos</span><span class="voice-dot"></span></div>
+              <div class="voice-wave" aria-hidden="true"></div>
+              <div class="voice-poster-bottom">
+                <span class="micro" data-i18n="cs_vbottom">GŁOS / WIDEO / JĘZYKI</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>
+              </div>
+            </div>
+            <div class="content-rows">
+              <article class="content-service">
+                <div class="content-service-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>
+                </div>
+                <div>
+                  <button type="button" class="content-service-title" data-select="3"><span data-i18n="c1_title">Lektor do wideo</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+                  <p data-i18n="c1_desc">Nagranie lektorskie na podstawie gotowego tekstu — do filmów, poradników i krótkich materiałów w social media.</p>
+                </div>
+              </article>
+              <article class="content-service">
+                <div class="content-service-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+                </div>
+                <div>
+                  <button type="button" class="content-service-title" data-select="4"><span data-i18n="c2_title">Krótkie wideo z AI</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+                  <p data-i18n="c2_desc">Tworzenie krótkich materiałów wideo z pomocą AI. Forma i styl dopasowane do Twojego pomysłu oraz docelowej platformy.</p>
+                </div>
+              </article>
+              <article class="content-service">
+                <div class="content-service-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="5" rx="2" ry="2"/><path d="M7 15h4"/><path d="M15 15h2"/><path d="M7 11h2"/><path d="M13 11h4"/></svg>
+                </div>
+                <div>
+                  <button type="button" class="content-service-title" data-select="5"><span data-i18n="c3_title">Napisy do wideo</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+                  <p data-i18n="c3_desc">Czytelne napisy zsynchronizowane z materiałem, aby Twoje treści były zrozumiałe również bez dźwięku.</p>
+                </div>
+              </article>
+              <article class="content-service">
+                <div class="content-service-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
+                </div>
+                <div>
+                  <button type="button" class="content-service-title" data-select="6"><span data-i18n="c4_title">Tłumaczenie i wersje głosowe</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+                  <p data-i18n="c4_desc">Tłumaczenie treści oraz nagranie w innym języku. Język i sposób realizacji uzgadniamy przed rozpoczęciem.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="content-section-bottom">
+            <span>YouTube · TikTok · Instagram</span>
+            <a href="#contact" class="text-link"><span data-i18n="cs_inquiry">Porozmawiajmy o treści</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section-layout reveal">
+        <div class="section-label micro" data-i18n="about_label">03 / O MNIE</div>
+        <div>
+          <h2 data-i18n="about_title">Enterprise-doświadczenie.
+Osobiste zaangażowanie.</h2>
+          <div class="about-intro">
+            <div class="experience">
+              <strong>23<span>+</span></strong>
+              <span class="micro" data-i18n="years">lata w IT</span>
+            </div>
+            <div>
+              <p data-i18n="about_text">Jestem Pavlo Rakulenko. Łączę doświadczenie w architekturze korporacyjnej dużych organizacji z elastycznością niezależnego developera. Znam IT od środka — od wymagań biznesowych do utrzymania systemu w produkcji.</p>
+              <div class="signature">Pavlo Rakulenko
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></div>
+            </div>
+          </div>
+          <div class="reasons">
+            <div class="reason"><span class="reason-index micro">01</span><h3 data-i18n="r1_title">Jedna osoba. Pełna odpowiedzialność.</h3><p data-i18n="r1_desc">Analiza, projektowanie, development, wdrożenie i wsparcie. Bez pośredników i bez „to nie moja działka”.</p></div>
+            <div class="reason"><span class="reason-index micro">02</span><h3 data-i18n="r2_title">Szybciej niż w agencji.</h3><p data-i18n="r2_desc">Bez organizacyjnych narzutów. Krótka droga od rozmowy do decyzji i pierwszych rezultatów.</p></div>
+            <div class="reason"><span class="reason-index micro">03</span><h3 data-i18n="r3_title">Technologia dopasowana do procesu.</h3><p data-i18n="r3_desc">Zaczynam od Twojego celu. Wybieram najprostsze rozwiązanie, które rzeczywiście działa.</p></div>
+            <div class="reason"><span class="reason-index micro">04</span><h3 data-i18n="r4_title">Myślę o tym, co będzie dalej.</h3><p data-i18n="r4_desc">Nie tylko uruchomienie. Czytelny kod, możliwość rozwoju i wsparcie po wdrożeniu.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section process">
+      <div class="section-layout reveal">
+        <div class="section-label micro" data-i18n="proc_label">04 / WSPÓŁPRACA</div>
+        <div>
+          <div class="process-heading">
+            <h2 data-i18n="proc_title">Od „mam pomysł”
+do „to działa”.</h2>
+            <div class="process-decor" aria-hidden="true">
+              <svg width="63" height="63" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+            </div>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-line"><span class="step-number">01</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <h3 data-i18n="p1_title">Rozmawiamy</h3><p data-i18n="p1_desc">Poznaję Twój pomysł, potrzeby i to, co ma się zmienić.</p>
+            </div>
+            <div class="step">
+              <div class="step-line"><span class="step-number">02</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <h3 data-i18n="p2_title">Projektuję</h3><p data-i18n="p2_desc">Ustalamy zakres, rozwiązanie i plan realizacji.</p>
+            </div>
+            <div class="step">
+              <div class="step-line"><span class="step-number">03</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <h3 data-i18n="p3_title">Buduję</h3><p data-i18n="p3_desc">Rozwijam produkt, a Ty widzisz postęp i masz wpływ.</p>
+            </div>
+            <div class="step">
+              <div class="step-line"><span class="step-number">04</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <h3 data-i18n="p4_title">Uruchamiam</h3><p data-i18n="p4_desc">Wdrażam, przekazuję rozwiązanie i wspieram jego rozwój.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="section-layout reveal">
+        <div class="section-label micro" data-i18n="faq_label">05 / PYTANIA</div>
+        <div class="faq-layout">
+          <h2 data-i18n="faq_title">Warto wiedzieć.</h2>
+          <div>
+            <details><summary><span data-i18n="q1">Czy mogę zamówić samo nagranie lektorskie lub napisy?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p data-i18n="a1">Tak. Możesz wysłać zapytanie dotyczące pojedynczej usługi: lektora, krótkiego wideo z AI, napisów albo tłumaczenia i wersji głosowej. Zakres, materiały i warunki uzgadniamy przez e-mail.</p></details>
+            <details><summary><span data-i18n="q2">Czy współpracujesz z osobami prywatnymi?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p data-i18n="a2">Tak. Pracuję zarówno z osobami prywatnymi, które mają pomysł na stronę lub aplikację, jak i z firmami potrzebującymi dedykowanego rozwiązania.</p></details>
+            <details><summary><span data-i18n="q3">Ile kosztuje realizacja projektu?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p data-i18n="a3">Wycena zależy od zakresu, integracji i stopnia złożoności. Opisz swój pomysł w formularzu — omówimy potrzeby i ustalimy zakres przed wyceną.</p></details>
+            <details><summary><span data-i18n="q4">Czy mogę zacząć tylko od pomysłu?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p data-i18n="a4">Oczywiście. Nie potrzebujesz gotowej specyfikacji. Pomogę przełożyć pomysł na konkretne wymagania i plan realizacji.</p></details>
+            <details><summary><span data-i18n="q5">Co dzieje się po uruchomieniu?</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></summary>
+              <p data-i18n="a5">Możemy ustalić dalsze wsparcie, utrzymanie i rozwój. Zakres oraz warunki uzgadniamy indywidualnie.</p></details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <span class="micro" data-i18n="contact_label">06 / TWÓJ NASTĘPNY KROK</span>
+          <h2 data-i18n="contact_title">Masz pomysł?
+Zbudujmy go.</h2>
+          <p data-i18n="contact_desc">Strona, aplikacja, nagranie lektorskie lub krótki film — opowiedz mi, czego potrzebujesz.</p>
+          <div class="direct-contact">
+            <span class="micro" data-i18n="direct">WOLISZ BEZPOŚREDNIO?</span>
+            <a href="mailto:PashFK@icloud.com">PashFK@icloud.com
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+            <a class="phone" href="tel:+48571371157">+48 571 371 157
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+          </div>
+          <div class="contact-spark" aria-hidden="true">✳</div>
+        </div>
+        <div class="form-wrap">
+          <output class="form-success" id="formSuccess" hidden>
+            <span class="success-icon">
+              <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <h3 data-i18n="sent_title">Wiadomość jest gotowa.</h3>
+            <p data-i18n="sent_text">Otworzyłem Twój program pocztowy z przygotowaną wiadomością — wystarczy ją wysłać.</p>
+            <button type="button" class="button button-light" id="againBtn"><span data-i18n="again">Wyślij kolejne zapytanie</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+          </output>
+          <form id="contactForm">
+            <div class="form-row">
+              <label><span data-i18n="name_l">Jak masz na imię?</span>
+                <input name="name" autocomplete="name" required minlength="2" maxlength="100" data-i18n-placeholder="name_ph" placeholder="Twoje imię" />
+              </label>
+              <label><span data-i18n="email_l">Twój adres e-mail</span>
+                <input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com" />
+              </label>
+            </div>
+            <fieldset>
+              <legend data-i18n="service_l">Czego potrzebujesz?</legend>
+              <div class="service-options" id="serviceOptions">
+                <label class="selected"><input type="radio" name="service" value="0" checked /><span data-i18n="opt1">Strona internetowa</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="1" /><span data-i18n="opt2">Aplikacja webowa</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="2" /><span data-i18n="opt3">Procesy / automatyzacja</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="3" /><span data-i18n="opt4">Lektor do wideo</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="4" /><span data-i18n="opt5">Wideo z AI</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="5" /><span data-i18n="opt6">Napisy</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="6" /><span data-i18n="opt7">Tłumaczenie / wersja głosowa</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+                <label><input type="radio" name="service" value="7" /><span data-i18n="opt8">Jeszcze nie wiem</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></label>
+              </div>
+            </fieldset>
+            <label class="message-label"><span data-i18n="message_l">Opowiedz o swoim pomyśle</span>
+              <textarea name="message" required minlength="10" maxlength="5000" rows="4" data-i18n-placeholder="placeholder" placeholder="Co chcesz stworzyć lub usprawnić?"></textarea>
+            </label>
+            <div class="honeypot" aria-hidden="true">
+              <label>Website<input name="website" tabindex="-1" autocomplete="off" /></label>
+            </div>
+            <label class="consent">
+              <input type="checkbox" required />
+              <span><span data-i18n="consent">Zapoznałem/am się z informacją o przetwarzaniu danych.</span>
+                <button type="button" class="privacy-trigger"><span data-i18n="privacy">Prywatność</span>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+              </span>
+            </label>
+            <button class="button button-light submit-button"><span data-i18n="send">Wyślij zapytanie</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+            <p class="form-note" data-i18n="required">Pola wymagane. Opis: minimum 10 znaków.</p>
+            <p class="form-note channel-note" data-i18n="channel">Formularz służy wyłącznie do zapytań. Ustalenia, zamówienia i faktury obsługuję przez e-mail.</p>
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-brand">
+          <span class="footer-monogram">pr↗</span>
+          <div>Pavlo Rakulenko<small data-i18n="footer_tag">Niezależny developer. Rozwiązania od A do Z.</small></div>
+        </div>
+        <div class="footer-meta">
+          <span>© <span id="year">2026</span> Pavlo Rakulenko</span>
+          <button type="button" id="businessBtn"><span data-i18n="company">Dane przedsiębiorcy</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+          <button type="button" class="privacy-trigger"><span data-i18n="privacy">Prywatność</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></button>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <dialog class="privacy-dialog" id="privacyDialog">
+    <div class="dialog-top">
+      <span class="micro">PAVLO RAKULENKO / JDG</span>
+      <button type="button" data-close="privacyDialog" aria-label="Zamknij">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <h2 data-i18n="privacy_title">Informacja o przetwarzaniu danych</h2>
+    <p data-i18n="privacy_body">Administratorem danych jest Pavlo Rakulenko, prowadzący jednoosobową działalność w Polsce. Kontakt: PashFK@icloud.com. Imię, e-mail i treść zapytania są przetwarzane w celu odpowiedzi i podjęcia działań przed zawarciem umowy (art. 6 ust. 1 lit. b RODO), a przy pozostałej korespondencji na podstawie uzasadnionego interesu (art. 6 ust. 1 lit. f). Podanie danych jest dobrowolne, ale potrzebne do odpowiedzi. Dane są przechowywane przez czas obsługi zapytania i uzasadnionej dalszej korespondencji; dłużej, gdy wymagają tego obowiązki prawne lub ochrona roszczeń. Możesz żądać dostępu, sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia danych i wnieść sprzeciw. Możesz złożyć skargę do Prezesa UODO.</p>
+    <a href="mailto:PashFK@icloud.com">PashFK@icloud.com</a>
+    <button type="button" class="button button-blue" data-close="privacyDialog"><span data-i18n="close">Zamknij</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button>
+  </dialog>
+
+  <dialog class="privacy-dialog business-dialog" id="businessDialog">
+    <div class="dialog-top">
+      <span class="micro">PAVLO RAKULENKO / JDG</span>
+      <button type="button" data-close="businessDialog" aria-label="Zamknij">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <h2 data-i18n="company">Dane przedsiębiorcy</h2>
+    <p data-i18n="company_title">Działam jako JDG w Polsce.</p>
+    <dl class="business-data">
+      <div><dt data-i18n="official_l">Nazwa firmy</dt><dd>Pavlo Rakulenko</dd></div>
+      <div><dt>NIP</dt><dd>6793359850</dd></div>
+      <div><dt>REGON</dt><dd>544239228</dd></div>
+      <div><dt data-i18n="legal_l">Forma działalności</dt><dd data-i18n="legal_v">Jednoosobowa działalność gospodarcza</dd></div>
+      <div><dt data-i18n="contact_l">Kontakt</dt><dd><a href="mailto:PashFK@icloud.com">PashFK@icloud.com</a></dd></div>
+    </dl>
+    <a class="register-link" href="https://www.biznes.gov.pl/pl/wyszukiwarka-firm/?nip=6793359850&amp;searchType=advanced" target="_blank" rel="noopener noreferrer"><span data-i18n="register">Sprawdź wpis w rejestrze</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+    <button type="button" class="button button-blue" data-close="businessDialog"><span data-i18n="close">Zamknij</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  </dialog>
+
+</div>
+<script src="script.js"></script>
+</body>
 </html>
