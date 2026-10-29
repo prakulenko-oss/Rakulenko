@@ -4,8 +4,12 @@ Vite (vanilla) project: `index.html` + `styles.css` + `script.js` + `public/font
 
 ## StackBlitz — exact steps
 You already have a Vite starter project. Replace its contents with this one:
-1. In the file tree, DELETE the starter files: the whole `src/` folder, `vite.config.ts`,
-   `tsconfig*.json`, `_oxlintrc.json`, `public/*`, `index.html`, `package.json`, `package-lock.json`.
+1. Clean the starter. Easiest — paste this in the StackBlitz terminal:
+   `rm -rf src vite.config.ts tsconfig.json tsconfig.app.json tsconfig.node.json _oxlintrc.json public`
+   (or delete the same items in the file tree), then also remove the starter's
+   `index.html`, `package.json`, `package-lock.json`.
+   Note: a leftover `vite.config.ts` is harmless now — this project ships its own
+   `vite.config.js`, which Vite loads with higher priority.
 2. Upload ALL files and folders from this archive into the project root
    (`index.html`, `styles.css`, `script.js`, `public/fonts/...`, `package.json`, `README.md`).
 3. StackBlitz reinstalls dependencies and runs `npm run dev` automatically.
